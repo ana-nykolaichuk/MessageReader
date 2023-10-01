@@ -1,0 +1,19 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <xsd:element name="note">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element type="xsd:string" name="from"/>
+                <xsd:element type="xsd:string" name="to"/>
+                <xsd:element type="shortString" name="heading"/>
+                <xsd:element type="xsd:string" name="body"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:simpleType name="shortString">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="10"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+</xsd:schema>
